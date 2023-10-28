@@ -1,0 +1,56 @@
+@startuml DER 
+
+class category{
+    id
+    name
+    description
+}
+
+class product{
+    name
+    description  
+    date_fabrication  
+    is_active  
+    category: Category
+}
+
+class orderitem{
+    quantity  
+    unitary_price  
+    order: Order
+    product: Product
+}
+
+class order{
+    total_price  
+    status  
+    client: Client
+}
+
+class client{
+    first_name  
+    last_name  
+    address  
+    cell_phone  
+    email  
+    gender  
+}
+
+class client_socialnetwork{
+    client: Client
+    socialnetwork: Socialnetwork
+}
+
+class socialnetwork{
+    name  
+    description
+}
+
+product *-- category
+client --* client_socialnetwork
+socialnetwork --*  client_socialnetwork
+client --* order
+order --* orderitem
+product --* orderitem
+
+@enduml
