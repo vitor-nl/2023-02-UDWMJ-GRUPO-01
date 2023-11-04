@@ -47,6 +47,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+<<<<<<< HEAD
+    'socialnetworks.apps.SocialnetworksConfig',
+
+=======
+    'categories.apps.CategoriesConfig',
+    'products.apps.ProductsConfig',
+>>>>>>> fe18ab1b734b5f08ddad8e63e4b9fe97727de70f
 ]
 
 MIDDLEWARE = [
