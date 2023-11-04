@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'rest_framework',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'socialnetworks.apps.SocialnetworksConfig',
 
 =======
@@ -59,6 +60,10 @@ INSTALLED_APPS = [
     'categories.apps.CategoriesConfig',
     'products.apps.ProductsConfig',
 >>>>>>> main
+=======
+    'socialnetworks.apps.SocialnetworksConfig',
+
+>>>>>>> 9d0607ff6c90bb0956ea87f5b069709f7e151e68
 ]
 
 MIDDLEWARE = [
