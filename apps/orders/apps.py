@@ -1,8 +1,8 @@
 from django.apps import AppConfig
 
 
-class CategoriesConfig(AppConfig):
+class OrdersConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'categories'
-    verbose_name = 'Categorias'
+    name = 'orders'
+    verbose_name = 'Pedidos'
 
