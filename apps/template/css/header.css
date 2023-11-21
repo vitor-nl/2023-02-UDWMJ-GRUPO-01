@@ -1,8 +1,8 @@
 #header {
     align-items: center;
-    padding: 2rem;
     display: flex;
     justify-content: space-between;
+    padding-top: 15px;
     background-color: var(--white);
     width: 100%;
 }
@@ -39,7 +39,6 @@
     margin-top: 7px;
     border: 0;
     border-bottom: 2px solid var(--lightGray);
-    outline: none;
     transition: .2s ease-in-out;
     box-sizing: border-box;
 }
