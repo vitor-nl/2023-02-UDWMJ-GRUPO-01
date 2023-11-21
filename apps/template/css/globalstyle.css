@@ -1,0 +1,23 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --lightGray: #9e9e9e;
+    --blue: #6C63FF;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover{
+    color: var(--blue);
+}
