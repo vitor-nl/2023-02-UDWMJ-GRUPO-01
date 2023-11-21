@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria Fapa</title>
 
+    <!-- Style -->
+    <link rel="stylesheet" href="css/globalstyle.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
     <header id="header">
-        <a id="logo" href="./home.html">
+        <a id="logo" href="#">
             <img src="images/logo.svg" alt="Ícone da loja">
             <span>Livraria Fapa</span>
         </a>
+
         <nav id="nav">
             <ul id="menu" role="menu">
-                <li><a href="./home.html">Início</a></li>
-                <li><a href="#nav_categories">Categorias</a></li>
-                <li><a href="#slider_multiple_items">Livros</a></li>
-                <li><a href="#localization">Localização</a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Localização</a></li>
             </ul>   
         </nav>
+
         <div id="search_entry">
             <input class="input" type="text" placeholder="Pesquise livros" pattern=".+" required />
             <button class="submit_lente" type="submit">
@@ -33,7 +40,7 @@
     
         <div id="icones_header">
     
-            <a href="./login_and_register.html">
+            <a href="#">
                 <div id="user_login">
                     <img src="images/login.svg" alt="Ícone de login da conta">
                     <span>olá, faça seu login ou cadastra-se</span>
@@ -52,7 +59,21 @@
     
     </header>
 
-    
+    <main>
+    <div id="presentation" class="general_formatting">
+        <div id="presentationText">
+            <h1>Aqui você encontra o que procura :)</h1>
+            <p>Nossa loja oferece a você os melhores livros para florescer sua imaginação.</p>
+            <a href="#slider_multiple_items1">Nossos produtos</a>
+        </div>
+
+        <div id="imgPresentation">
+            <img src="images/banner.png" alt="Livro">
+        </div>
+    </div>
+
+
+    </main>
     
 </body>
 </html>
