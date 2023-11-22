@@ -1,9 +1,9 @@
 #nav_categories {
     max-width: 100%;
-    margin-top: 70px;
+    margin: 70px 0;
     width: 90vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
