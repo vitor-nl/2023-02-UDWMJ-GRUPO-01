@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/card.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +36,7 @@
         <div id="search_entry">
             <input class="input" type="text" placeholder="Pesquise livros" pattern=".+" required />
             <button class="submit_lente" type="submit">
-                <img src="images/lupa.svg" alt="ícone de lupa">
+                <img src="images/icons/search.svg" alt="ícone de lupa">
             </button>
         </div>
     
@@ -43,17 +44,17 @@
     
             <a href="#">
                 <div id="user_login">
-                    <img src="images/login.svg" alt="Ícone de login da conta">
+                    <img src="images/icons/login.svg" alt="Ícone de login da conta">
                     <span>olá, faça seu login ou cadastra-se</span>
                 </div>
             </a>
     
             <div id="heart_icon">
-                <img src="images/favoritos.svg" alt="Ícone dos favoritos">
+                <img src="images/icons/heart.svg" alt="Ícone dos favoritos">
             </div>
     
             <div id="shopping_cart">
-                <img src="images/carrinho.svg" alt="Ícone de carrinho de compra">
+                <img src="images/icons/shopping_cart.svg" alt="Ícone de carrinho de compra">
                 <span>R$ 0,00</span>
             </div>
         </div>
@@ -90,6 +91,23 @@
                     <li><a href="/">Ficção científica</a></li>
             </ul>
         </nav>
+
+        <div id="container_cards">
+            <div class="book_card">
+                <img src="images/livroTeste.jpg" alt="capa do livro {xx}" class="card_image">
+            
+                <div class="book_informations">
+                    <p class="book_price">R${00,00}</p>
+                    <p class="book_title">{Title}</p>
+                    <p class="book_author">{Author}</p>
+                </div>
+
+                <footer class="footer_card">
+                    <a class="book_add_car">Comprar</a>
+                    <img class="book_favorite" src="images/icons/heart.svg" alt="">
+                </footer>
+            </div>
+        </div>
         
     </main>
     
