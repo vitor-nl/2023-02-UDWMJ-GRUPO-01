@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/category.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/footer.css ">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,9 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
+<body>
     <header id="header">
-        <a id="logo" href="#">
-            <img src="images/logo.svg" alt="Ícone da loja">
+        <a class="logo" href="#">
+            <img class="pointer" src="images/logo.png" alt="Ícone da loja">
             <span>Livraria Fapa</span>
         </a>
 
@@ -29,8 +32,8 @@
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Categorias</a></li>
                 <li><a href="#">Livros</a></li>
-                <li><a href="#">Localização</a></li>
-            </ul>   
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
         </nav>
 
         <div id="search_entry">
@@ -39,26 +42,24 @@
                 <img src="images/icons/search.svg" alt="ícone de lupa">
             </button>
         </div>
-    
+
         <div id="icones_header">
-    
             <a href="#">
                 <div id="user_login">
-                    <img src="images/icons/login.svg" alt="Ícone de login da conta">
+                    <img class="pointer" src="images/icons/login.svg" alt="Ícone de login da conta">
                     <span>olá, faça seu login ou cadastra-se</span>
                 </div>
             </a>
-    
+
             <div id="heart_icon">
-                <img src="images/icons/full_heart.png" alt="Ícone dos favoritos">
+                <img class="pointer" src="images/icons/full_heart.png" alt="Ícone dos favoritos">
             </div>
-    
+
             <div id="shopping_cart">
-                <img src="images/icons/shopping_cart.svg" alt="Ícone de carrinho de compra">
+                <img class="pointer" src="images/icons/shopping_cart.svg" alt="Ícone de carrinho de compra">
                 <span>R$ 0,00</span>
             </div>
         </div>
-    
     </header>
 
     <main>
@@ -76,26 +77,27 @@
 
         <nav id="nav_categories">
             <div>
-                <h1>Nossas categorias:</h1>
+                <h2>Nossas categorias:</h2>
             </div>
             <ul id="menu_categories">
-                    <li><a href="/">Romance</a></li>
-                    <li><a href="/">Mistério</a> </li>
-                    <li><a href="/">Quadrinhos</a></li>
-                    <li><a href="/">Autoajuda</a></li>
-                    <li><a href="/">Biografia</a></li>
-                    <li><a href="/">Terror</a></li>
-                    <li><a href="/">Policial</a></li>
-                    <li><a href="/">Poesia</a></li>
-                    <li><a href="/">Fantasia</a></li>
-                    <li><a href="/">Ficção científica</a></li>
+                <li><a href="/">Romance</a></li>
+                <li><a href="/">Mistério</a> </li>
+                <li><a href="/">Quadrinhos</a></li>
+                <li><a href="/">Autoajuda</a></li>
+                <li><a href="/">Biografia</a></li>
+                <li><a href="/">Terror</a></li>
+                <li><a href="/">Policial</a></li>
+                <li><a href="/">Poesia</a></li>
+                <li><a href="/">Fantasia</a></li>
+                <li><a href="/">Ficção científica</a></li>
             </ul>
         </nav>
 
+
         <div id="container_cards">
             <div class="book_card">
-                <img src="images/livroTeste.jpg" alt="capa do livro {xx}" class="card_image">
-            
+                <img src="images/livroTeste.jpg" alt="capa do livro {xx}" class="card_image pointer">
+
                 <div class="book_informations">
                     <p class="book_price">R${00,00}</p>
                     <p class="book_title">{Title}</p>
@@ -104,10 +106,53 @@
 
                 <footer class="footer_card">
                     <a class="book_add_car">Comprar</a>
-                    <img class="book_favorite" src="images/icons/empty_heart.png" alt="">
+                    <img class="book_favorite pointer" src="images/icons/empty_heart.png" alt="">
                 </footer>
             </div>
+        </div>
+
     </main>
-    
+
+    <footer id="footer">
+        <div id="footer_container">
+            <div id="footer_informaiton">
+                <h3 id="info_title">Contato</h3>
+            
+                <div id="infos">
+                    <img class="infos_icon contact" src="images/icons/phone.svg" alt="placeholder">
+                    <p id="infos_text">(55) 51 0000-0000</p>
+                </div>
+            
+                <div id="infos">
+                    <img class="pointer infos_icon contact" src="images/icons/email.svg" alt="">
+                    <p class="pointer" id="infos_text">livrariafapa@email.com</p>
+                </div>
+            </div>
+            
+            <div id="footer_informaiton">
+                <h3 id="info_title">Redes Sociais</h3>
+            
+                <div id="infos" class="pointer">
+                    <img class="infos_icon social_media" src="images/icons/instagram.png" alt="">
+                    <p id="infos_text">@livrariaFapa</p>
+                </div>
+            
+                <div id="infos" class="pointer">
+                    <img class="infos_icon social_media" src="images/icons/facebook.svg" alt="">
+                    <p id="infos_text">Livraria Fapa</p>
+                </div>
+            </div>
+            
+            <div id="footer_phrase">
+                <a class="logo" href="#">
+                    <img class="infos_icon" src="images/logo_white.png" alt="Ícone da loja">
+                    <span id="footer_logo">Livraria Fapa</span>
+                </a>
+                <p>Os livros nos levam a lugares inimagináveis, com eles tudo é possível.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

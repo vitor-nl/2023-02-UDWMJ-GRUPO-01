@@ -14,9 +14,10 @@ body{
 :root{
     --black: #000;
     --white: #fff;
+    --secondWhite: #F2F2F2;
     --lightGray: #9e9e9e;
-    --primaryBlue: #2D446E;
-    --primaryGreen: #65AA92;
+    --darkBlue: #2D446E;
+    --green: #65AA92;
 }
 
 a {
@@ -25,6 +26,10 @@ a {
 }
 
 a:hover{
-    color: var(--primaryBlue);
+    color: var(--darkBlue);
     font-weight: bold;
+}
+
+.pointer{
+    cursor: pointer;
 }
