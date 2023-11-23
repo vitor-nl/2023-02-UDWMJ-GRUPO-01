@@ -32,7 +32,7 @@
 
 #presentationText > a {
     padding: 15px;
-    background-color: var(--primaryGreen);
+    background-color: var(--green);
     font-size: 1rem;
     color: var(--white);
     border-radius: 5px;
