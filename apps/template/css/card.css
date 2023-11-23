@@ -20,12 +20,12 @@
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 35px;
-    color: #241400;
+    color: var(--secondBlack);
 }
 
 .book_title {
     font-size: 0.75rem;
-    color: #241400;
+    color: var(--secondBlack);
     font-weight: bold;
 }
 
