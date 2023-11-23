@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding-top: 15px;
+    padding: 15px 70px 0;
     background-color: var(--white);
     width: 100%;
 }
@@ -48,17 +48,16 @@
     top: -25px;
     left: 1px;
     border: 0px;
-    cursor: pointer;
     background-color: var(--white);
 }
 
-#icones_header {
+#header_icons {
     display: flex;
     column-gap: 30px;
     margin-top: 10px;
 }
 
-#icones_header img {
+#header_icons img {
     max-width: 37px;
     max-height: 38px;
 }
