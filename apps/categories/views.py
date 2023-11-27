@@ -9,3 +9,6 @@ from .serializer import CategorySerializer
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+def home(request):
+    return render(request, "home.html")
