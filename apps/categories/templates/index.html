@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,24 +8,27 @@
     <title>Livraria Fapa</title>
 
     <!-- Style -->
-    <link rel="stylesheet" href="css/home/globalstyle.css">
-    <link rel="stylesheet" href="css/home/header.css">
-    <link rel="stylesheet" href="css/home/banner.css">
-    <link rel="stylesheet" href="css/home/category.css">
-    <link rel="stylesheet" href="css/home/card.css">
-    <link rel="stylesheet" href="css/home/aboutUs.css">
-    <link rel="stylesheet" href="css/home/footer.css ">
+    <link rel="stylesheet" href="{% static 'css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}">
+    <link rel="stylesheet" href="{% static 'css/aboutUs.css'%}">
+    <link rel="stylesheet" href="{% static 'css/card.css'%}">
+    <link rel="stylesheet" href="{% static 'css/category.css'%}">
+    <link rel="stylesheet" href="{% static 'css/banner.css'%}">
+    <link rel="stylesheet" href="{% static 'css/globalstyle.css'%}">
+  
+    
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400display=swap" rel="stylesheet">
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400display=swap' %}" rel="stylesheet">
 </head>
 
 <body>
     <div id="container">
         <header id="header">
             <a class="logo" href="#">
+                <img class="pointer" src="{% static 'images/logo.png' %}" alt="Ilustração de livro aberto">
                 <span>Livraria Fapa</span>
             </a>
         
@@ -40,24 +44,24 @@
             <div id="search_field">
                 <input class="input pointer" type="text" placeholder="Pesquise livros" pattern=".+" required />
                 <button class="submit_lente pointer" type="submit">
-                    <img src="images/icons/search.svg" alt="ícone de lupa">
+                    <img src="{% static 'images/icons/search.svg' %}" alt="ícone de lupa">
                 </button>
             </div>
         
             <div id="header_icons">
                 <a href="#">
                     <div id="user_login">
-                        <img class="pointer" src="images/icons/login.svg" alt="Ícone de login da conta">
+                        <img class="pointer" src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
                         <span>olá, faça seu login ou cadastra-se</span>
                     </div>
                 </a>
         
                 <div id="heart_icon">
-                    <img class="pointer" src="images/icons/full_heart.png" alt="Ícone de coração">
+                    <img class="pointer" src="{% static 'images/icons/full_heart.png' %}" alt="Ícone de coração">
                 </div>
         
                 <div id="shopping_cart">
-                    <img class="pointer" src="images/icons/shopping_cart.svg" alt="Ícone de carrinho de compra">
+                    <img class="pointer" src="{% static 'images/icons/shopping_cart.svg' %}" alt="Ícone de carrinho de compra">
                     <span>R$ 0,00</span>
                 </div>
             </div>
@@ -72,7 +76,7 @@
                 </div>
         
                 <div id="imgPresentation">
-                    <img src="images/banner.png" alt="Ilustração de menino colocando um livro em uma prateleira">
+                    <img src="{% static 'images/banner.png' %}" alt="Ilustração de menino colocando um livro em uma prateleira">
                 </div>
             </div>
         
@@ -94,7 +98,7 @@
         
             <div id="container_cards">
                 <div class="book_card">
-                    <img class="card_image pointer" src="images/livroTeste.jpg" alt="capa do livro {xx}">
+                    <img class="card_image pointer" src="{% static 'images/livroTeste.jpg' %}" alt="capa do livro {xx}">
         
                     <div class="book_informations">
                         <p class="book_price">R${00,00}</p>
@@ -104,7 +108,7 @@
         
                     <footer class="footer_card">
                         <a class="book_add_car">Comprar</a>
-                        <img class="book_favorite pointer" src="images/icons/empty_heart.png" alt="ícone de coração">
+                        <img class="book_favorite pointer" src="{% static 'images/icons/empty_heart.png' %}" alt="ícone de coração">
                     </footer>
                 </div>
             </div>
@@ -125,15 +129,15 @@
         
                 <div id="group">
                     <div>
-                        <img src="images/perfilTeste.png" alt="">
+                        {% comment %} <img src="images/perfilTeste.png" alt=""> {% endcomment %}
                         <p>Adri</p>
                     </div>
                     <div>
-                        <img src="images/perfilTeste.png" alt="">
+                        <img src="{% static 'images/Leonardo.jpg' %}" alt="">
                         <p>Leo</p>
                     </div>
                     <div>
-                        <img src="images/perfilTeste.png" alt="">
+                        {% comment %} <img src="images/perfilTeste.png" alt=""> {% endcomment %}
                         <p>Mari</p>
                     </div>
                 </div>
@@ -146,12 +150,12 @@
                 <h3 id="info_title">Contato</h3>
     
                 <div id="infos">
-                    <img class="infos_icon contact" src="images/icons/phone.svg" alt="Ícone de telefone">
+                    <img class="infos_icon contact" src="{% static 'images/icons/phone.svg' %}" alt="Ícone de telefone">
                     <p id="infos_text">(55) 51 0000-0000</p>
                 </div>
     
                 <div id="infos">
-                    <img class="pointer infos_icon contact" src="images/icons/email.svg" alt="ícone de carta">
+                    <img class="pointer infos_icon contact" src="{% static 'images/icons/email.svg' %}" alt="ícone de carta">
                     <p class="pointer" id="infos_text">livrariafapa@email.com</p>
                 </div>
             </div>
@@ -160,19 +164,19 @@
                 <h3 id="info_title">Redes Sociais</h3>
     
                 <div id="infos" class="pointer">
-                    <img class="infos_icon social_media" src="images/icons/instagram.png" alt="Logo do instagram">
+                    <img class="infos_icon social_media" src="{% static 'images/icons/instagram.png' %}" alt="Logo do instagram">
                     <p id="infos_text">@livrariaFapa</p>
                 </div>
     
                 <div id="infos" class="pointer">
-                    <img class="infos_icon social_media" src="images/icons/facebook.svg" alt="Logo do Facebook">
+                    <img class="infos_icon social_media" src="{% static 'images/icons/facebook.svg' %}" alt="Logo do Facebook">
                     <p id="infos_text">Livraria Fapa</p>
                 </div>
             </div>
     
             <div id="footer_phrase">
                 <a class="logo" href="#">
-                    <img class="infos_icon" src="images/logo_white.png" alt="Ilustração de livro aberto">
+                    <img class="infos_icon" src=""{% static 'images/icons/logo_white.png' %}" alt="Ilustração de livro aberto">
                     <span id="footer_logo">Livraria Fapa</span>
                 </a>
                 <p>Os livros nos levam a lugares inimagináveis, com eles tudo é possível.</p>

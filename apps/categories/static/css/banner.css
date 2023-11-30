@@ -1,0 +1,41 @@
+#initial_banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#presentationText {
+    max-width: 410px;
+    width: 80vw;
+}
+
+#presentationText > h1 {
+    font-size: 2.25rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#presentationText > p {
+    font-size: 1rem;
+    line-height: 30px;
+    color: var(--black);
+    margin-bottom: 30px;
+}
+
+#presentationText > a {
+    padding: 15px;
+    background-color: var(--green);
+    font-size: 1rem;
+    color: var(--white);
+    border-radius: 5px;
+}
+
+#imgPresentation > img {
+    display: block;
+    margin: auto;
+    max-width: 550px;
+    width: 100vw;
+}
+
+

@@ -11,4 +11,4 @@ class CategoryViewSet(viewsets.ModelViewSet):
     serializer_class = CategorySerializer
 
 def home(request):
-    return render(request, "home.html")
+    return render(request, "index.html")
