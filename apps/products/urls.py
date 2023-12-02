@@ -1,12 +1,17 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 from rest_framework import routers
+# from .views import home, salvar
 
-app_name = 'products'
 
-router = routers.DefaultRouter()
-router.register('produtos', views.ProductViewSet, basename='produtos')
+app_name = "products"
+
+# router = routers.DefaultRouter()
+# router.register("produtos", views.ProductViewSet, basename="produtos")
 
 urlpatterns = [
-    path('', include(router.urls) )
+    # path("", home),
+    # path('', salvar, name='salvar'),
 ]
+
+

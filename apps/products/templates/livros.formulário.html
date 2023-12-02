@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livraria Fapa</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/header.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/aboutUs.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/card.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/category.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/banner.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/globalstyle.css'%}" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body>
+    <div id="container">
+      <header id="header">
+        <a class="logo" href="templates/livros.formulario.html">
+          <img
+            class="pointer"
+            src="{% static 'images/logo.png' %}"
+            alt="Ilustração de livro aberto"
+          />
+          <span>Livraria Fapa</span>
+        </a>
+
+        <nav id="nav">
+          <ul id="menu" role="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Livros</a></li>
+            <li><a href="#">Sobre nós</a></li>
+          </ul>
+        </nav>
+
+        <div id="search_field">
+          <input
+            class="input pointer"
+            type="text"
+            placeholder="Pesquise livros"
+            pattern=".+"
+            required
+          />
+          <button class="submit_lente pointer" type="submit">
+            <img
+              src="{% static 'images/icons/search.svg' %}"
+              alt="ícone de lupa"
+            />
+          </button>
+        </div>
+
+        <div id="header_icons">
+          <a href="#">
+            <div id="user_login">
+              <img
+                class="pointer"
+                src="{% static 'images/icons/login.svg' %}"
+                alt="Ícone de login da conta"
+              />
+              <span>olá, faça seu login ou cadastra-se</span>
+            </div>
+          </a>
+
+          <div id="heart_icon">
+            <img
+              class="pointer"
+              src="{% static 'images/icons/full_heart.png' %}"
+              alt="Ícone de coração"
+            />
+          </div>
+
+          <div id="shopping_cart">
+            <img
+              class="pointer"
+              src="{% static 'images/icons/shopping_cart.svg' %}"
+              alt="Ícone de carrinho de compra"
+            />
+            <span>R$ 0,00</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        {% comment %} FORM {% endcomment %}
+        {% comment %} <form action="{% url 'salvar' %}" method="POST">
+          <input type="text" name="nomeLivro" />
+          <button type="submit"></button>
+        </form> {% endcomment %}
+
+      </main>
+    </div>
+    <footer id="footer">
+      <div id="footer_container">
+        <div id="footer_informaiton">
+          <h3 id="info_title">Contato</h3>
+
+          <div id="infos">
+            <img
+              class="infos_icon contact"
+              src="{% static 'images/icons/phone.svg' %}"
+              alt="Ícone de telefone"
+            />
+            <p id="infos_text">(55) 51 0000-0000</p>
+          </div>
+
+          <div id="infos">
+            <img
+              class="pointer infos_icon contact"
+              src="{% static 'images/icons/email.svg' %}"
+              alt="ícone de carta"
+            />
+            <p class="pointer" id="infos_text">livrariafapa@email.com</p>
+          </div>
+        </div>
+
+        <div id="footer_informaiton">
+          <h3 id="info_title">Redes Sociais</h3>
+
+          <div id="infos" class="pointer">
+            <img
+              class="infos_icon social_media"
+              src="{% static 'images/icons/instagram.png' %}"
+              alt="Logo do instagram"
+            />
+            <p id="infos_text">@livrariaFapa</p>
+          </div>
+
+          <div id="infos" class="pointer">
+            <img
+              class="infos_icon social_media"
+              src="{% static 'images/icons/facebook.svg' %}"
+              alt="Logo do Facebook"
+            />
+            <p id="infos_text">Livraria Fapa</p>
+          </div>
+        </div>
+
+        <div id="footer_phrase">
+          <a class="logo" href="#">
+            <img
+              class="infos_icon"
+              src="{% static 'images/logo_white.png' %}"
+              alt="Ilustração de livro aberto"
+            />
+            <span id="footer_logo">Livraria Fapa</span>
+          </a>
+          <p>
+            Os livros nos levam a lugares inimagináveis, com eles tudo é
+            possível.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
