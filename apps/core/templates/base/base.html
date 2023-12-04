@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Django exemplo autenticação</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="{% url 'index' %}">Index</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'cadastroLivros' %}">CRUD</a>
+            <p>Ola, {{ request.user.username }} ! Seja muito bem vindo :)</p>
+
+        {% block content %}
+        {% endblock %}
+        {% if request.user.is_authenticated %}
+        <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Sair</a></li>
+        {% endif %}
+        
+    </div>
+</body>
+
+</html>

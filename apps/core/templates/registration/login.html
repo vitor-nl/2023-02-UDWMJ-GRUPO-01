@@ -1,0 +1,21 @@
+{% block content %}
+<h1>LOGIN</h1>
+
+<form method="post">
+    {% csrf_token %}
+        <label for="email_address">Username</label>
+        <input type="text" name="username" required autofocus>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+    {% for k, v in form.errors.items %}
+    {{ v }}
+    {% endfor %}
+</form>
+
+<a href="{% url 'index' %}">Voltar</a>
+
+{% endblock %} 
