@@ -2,6 +2,7 @@
     max-width: 900px;
     margin: 70px auto;
     text-align: justify;
+    background: red;
 }
 
 #about_us > h3{
@@ -19,14 +20,13 @@
     display: flex;
 }
 
-#group > div{
+.team_photo{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#group > div > img{
-    border-radius: 100px;
+.team_photo > img{
     width: 90px;
 }
