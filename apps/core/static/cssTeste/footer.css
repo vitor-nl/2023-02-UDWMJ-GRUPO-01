@@ -1,7 +1,7 @@
 #footer{
-    width: 100%;
-    background: var(--darkBlue);
-    color: var(--secondWhite);
+    width: 100%!important;
+    background: var(--darkBlue)!important;
+    color: var(--secondWhite)!important;
 }
 
 #footer_container{
@@ -18,7 +18,7 @@
 }
 
 #info_title {
-    font-weight: bold;
+    font-weight: bold!important;
     margin-bottom: 30px;
 }
 
