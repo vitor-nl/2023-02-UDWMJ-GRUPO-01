@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-{% load static %} 
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria Fapa</title>
+    <title>Livraria Futuro</title>
 
     <!-- Style -->
     <link rel="stylesheet" href="{% static 'app/css/globalstyle.css' %}">
@@ -17,6 +16,9 @@
     <link rel="stylesheet" href="css/home/card.css">
     <link rel="stylesheet" href="css/home/aboutUs.css">
     <link rel="stylesheet" href="css/home/footer.css ">
+    <link rel="stylesheet" href="css/home/modal.css">
+    <script src="js/modal.js"></script>
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +31,7 @@
         <header id="header">
             <a class="logo" href="#">
                 <img class="pointer" src="images/logo.png" alt="Ilustração de livro aberto">
-                <span>Livraria Fapa</span>
+                <span>Livraria Futuro</span>
             </a>
 
             <nav id="nav">
@@ -52,17 +54,12 @@
                 <a href="#">
                     <div id="user_login">
                         <img class="pointer" src="images/icons/login.svg" alt="Ícone de login da conta">
-                        <span>olá, faça seu login ou cadastra-se</span>
+                        <span>Faça seu login ou Cadastra-se</span>
                     </div>
                 </a>
 
                 <div id="heart_icon">
                     <img class="pointer" src="images/icons/full_heart.png" alt="Ícone de coração">
-                </div>
-
-                <div id="shopping_cart">
-                    <img class="pointer" src="images/icons/shopping_cart.svg" alt="Ícone de carrinho de compra">
-                    <span>R$ 0,00</span>
                 </div>
             </div>
         </header>
@@ -70,9 +67,10 @@
         <main>
             <div id="initial_banner">
                 <div id="presentationText">
-                    <h1>Aqui você encontra o que procura :)</h1>
-                    <p>Nossa loja oferece a você os melhores livros para florescer sua imaginação.</p>
-                    <a href="#">Nossos produtos</a>
+                    <h1>Doe um livro, transforme uma vida.</h1>
+                    <p>Junte-se a nós nessa missão de tornar o conhecimento acessível a todos.
+                    </p>
+                    <a href="#">Cadastre um Livro</a>
                 </div>
 
                 <div id="imgPresentation">
@@ -82,7 +80,8 @@
 
             <nav id="nav_categories">
                 <div>
-                    <h2>Nossas categorias:</h2>
+                    <h2>Categorias de Livros:</h2>
+                    <h4>Diversas opções para gostos variados :)</h4>
                 </div>
                 <ul id="menu_categories">
                     <li><a href="#">Romance</a></li>
@@ -113,12 +112,34 @@
                 </div>
             </div>
 
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+              
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Informações do livro</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p><strong>Doador:</strong> João Silva</p>
+                      <p><strong>Telefone para contato:</strong> (11) 99999-9999</p>
+                      <p><strong>Descrição:</strong> Livro em ótimo estado de conservação. Trata-se de uma história emocionante sobre superação e amizade.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+              
+
             <div id="about_us">
                 <h3>Sobre nós</h3>
                 <p>
-                    A Livraria Fapa foi criada pelos alunos do curso de Análise e desenvolvimento de sistemas da
+                    A Livraria Futuro foi criada pelos alunos do curso de Análise e desenvolvimento de sistemas da
                     faculdade
-                    Unirriter campus Fapa em Porto Alegre, RS.
+                    Unirriter campus Futuro em Porto Alegre, RS.
                 </p>
                 <p>
                     A iniciativa surgiu através do desenvolvimento de um projeto avaliativo da disciplina de Sistemas
@@ -128,21 +149,28 @@
                     Djando, assim
                     como html e css.
                 </p>
+                <p>
+                    Acreditamos que o conhecimento é um direito de todos, e que todos devem ter a oportunidade de aprender e crescer. Por isso, criamos a Livraria do Futuro, uma plataforma online que conecta pessoas que querem doar livros com pessoas que precisam deles.
+                    Nosso objetivo é tornar o conhecimento acessível a todos, independentemente de sua classe social, localização ou situação financeira. Acreditamos que a educação é a chave para um futuro melhor, e que todos devem ter a oportunidade de aprender e se desenvolver.
+                    A Livraria do Futuro é uma plataforma segura e confiável, onde as pessoas podem doar e receber livros com tranquilidade. Trabalhamos para garantir que todas as transações sejam realizadas de forma segura e transparente.
+                    Além disso, estamos comprometidos com a união de pessoas em torno de um propósito comum: a promoção da educação e da cultura. Acreditamos que a educação é um caminho para a transformação social, e que todos devemos trabalhar juntos para construir um mundo mais justo e igualitário.
+                    
+                    <p>Doe um livro, transforme uma vida.</p>
+                </p>
 
                 <div id="group">
                     <div>
-                        <img src="images/perfilTeste.png" alt="">
+                        <img src="" alt="">
                         <p>Adri</p>
                     </div>
                     <div>
-                        <img src="images/perfilTeste.png" alt="">
+                        <img src="images/leo.png" alt="">
                         <p>Leo</p>
                     </div>
                     <div>
-                        <img src="images/perfilTeste.png" alt="">
+                        <img src="images/mari.png" alt="">
                         <p>Mari</p>
                     </div>
-                </div>
             </div>
         </main>
     </div>
@@ -158,7 +186,7 @@
 
                 <div id="infos">
                     <img class="pointer infos_icon contact" src="images/icons/email.svg" alt="ícone de carta">
-                    <p class="pointer" id="infos_text">livrariafapa@email.com</p>
+                    <p class="pointer" id="infos_text">livrariafuturo@email.com</p>
                 </div>
             </div>
 
@@ -167,19 +195,19 @@
 
                 <div id="infos" class="pointer">
                     <img class="infos_icon social_media" src="images/icons/instagram.png" alt="Logo do instagram">
-                    <p id="infos_text">@livrariaFapa</p>
+                    <p id="infos_text">@livrariaFuturo</p>
                 </div>
 
                 <div id="infos" class="pointer">
                     <img class="infos_icon social_media" src="images/icons/facebook.svg" alt="Logo do Facebook">
-                    <p id="infos_text">Livraria Fapa</p>
+                    <p id="infos_text">Livraria Futuro</p>
                 </div>
             </div>
 
             <div id="footer_phrase">
                 <a class="logo" href="#">
                     <img class="infos_icon" src="images/logo_white.png" alt="Ilustração de livro aberto">
-                    <span id="footer_logo">Livraria Fapa</span>
+                    <span id="footer_logo">Livraria Futuro</span>
                 </a>
                 <p>Os livros nos levam a lugares inimagináveis, com eles tudo é possível.</p>
             </div>
