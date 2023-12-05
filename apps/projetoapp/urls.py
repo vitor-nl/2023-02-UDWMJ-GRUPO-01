@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from core import views
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -17,4 +18,4 @@ urlpatterns = [
     path("clientes_redessociais/", include("clients.urls", namespace="clients_socialnetworks"),),
     path('accounts/', include('django.contrib.auth.urls')),
     path('books/', include("books.urls")),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
