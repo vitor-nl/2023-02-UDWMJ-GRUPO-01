@@ -17,13 +17,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> {% endcomment %}
 
     <!-- Style -->
-    <link rel="stylesheet" href="{% static 'cssTeste/header.css'%}">
-    <link rel="stylesheet" href="{% static 'cssTeste/footer.css'%}">
-    <link rel="stylesheet" href="{% static 'cssTeste/aboutUs.css'%}">
-    <link rel="stylesheet" href="{% static 'cssTeste/card.css'%}">
-    <link rel="stylesheet" href="{% static 'cssTeste/category.css'%}">
-    <link rel="stylesheet" href="{% static 'cssTeste/banner.css'%}">
-    <link rel="stylesheet" href="{% static 'cssTeste/globalstyle.css'%}">
+    <link rel="stylesheet" href="{% static 'style/header.css' %}">
+    <link rel="stylesheet" href="{% static 'style/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'style/aboutUs.css' %}">
+    <link rel="stylesheet" href="{% static 'style/card.css' %}">
+    <link rel="stylesheet" href="{% static 'style/category.css' %}">
+    <link rel="stylesheet" href="{% static 'style/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'style/globalstyle.css' %}">
 </head>
 
 <body>
@@ -37,7 +37,11 @@
             <ul id="menu" role="menu">
                 <li><a href="#initial_banner">Início</a></li>
                 <li><a href="#nav_categories">Categorias</a></li>
-                <li><a href="#container_cards">Livros</a></li>
+                {% if request.user.is_authenticated %}
+                  <li><a href="#container_cards">Livros</a></li>
+                {% else %}
+                
+                {% endif %}
                 <li><a href="#about_us">Sobre nós</a></li>
             </ul>
         </nav>
@@ -50,20 +54,17 @@
         </div>
 
         <div id="header_icons">
-            <div id="user_login">
-                <img class="pointer" src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
- 
-                 <a id="teste" href="{% url 'login' %}">olá, faça seu login ou cadastra-se</a> 
-            </div>
+            <img src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
+
+            {% if request.user.is_authenticated %}
+                <p>Olá, {{ request.user.username }} !</p>
+            {% else %}
+                <a href="{% url 'login' %}">Olá, faça seu login ou cadastra-se</a>
+            {% endif %}
             
             {% if request.user.is_authenticated %}
-            <a href="{% url 'logout' %}">Sair</a>
+                <a href="{% url 'logout' %}">Sair</a>
             {% endif %} 
-
-            <div id="heart_icon">
-                <img class="pointer" src="{% static 'images/icons/full_heart.png' %}" alt="Ícone de coração">
-            </div>
-
         </div>
     </header>
 
@@ -172,17 +173,18 @@
                 </p>
 
                 <div id="group">
-                    <div>
-                        {% comment %} <img src="images/perfilTeste.png" alt=""> {% endcomment %}
-                        <p>Adri</p>
+
+                    <div class="team_photo">
+                        <img src="{% static 'images/adriele.jpeg' %}" alt="">
+                        <p>Adriele Ferreira</p>
                     </div>
-                    <div>
-                        <img src="{% static 'images/Leonardo.jpg' %}" alt="">
-                        <p>Leo</p>
+                    <div class="team_photo">
+                        <img src="{% static 'images/leonardo.jpg' %}" alt="">
+                        <p>Leonardo Carvalho</p>
                     </div>
-                    <div>
-                        {% comment %} <img src="{% static 'images/mariana.jpg' %}" alt=""> {% endcomment %}
-                        <p>Mari</p>
+                    <div class="team_photo">
+                        <img src="{% static 'images/mariana.jpg' %}" alt="">
+                        <p>Mariana Gonçalves</p>
                     </div>
                 </div>
             </div>
