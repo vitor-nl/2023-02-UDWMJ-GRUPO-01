@@ -24,6 +24,7 @@ main{
     --lightGray: #9e9e9e;
     --darkBlue: #2D446E;
     --green: #65AA92;
+    overflow-x: hidden;
 }
 
 a {
