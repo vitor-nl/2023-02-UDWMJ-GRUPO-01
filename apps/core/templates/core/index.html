@@ -15,7 +15,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <!-- Style -->
     <link rel="stylesheet" href="{% static 'style/header.css'%}">
     <link rel="stylesheet" href="{% static 'style/footer.css'%}">
@@ -23,10 +22,17 @@
     <link rel="stylesheet" href="{% static 'style/card.css'%}">
     <link rel="stylesheet" href="{% static 'style/category.css'%}">
     <link rel="stylesheet" href="{% static 'style/banner.css'%}">
+    <link rel="stylesheet" href="{% static 'style/float.css'%}">
     <link rel="stylesheet" href="{% static 'style/globalstyle.css'%}">
 </head>
 
 <body style="overflow-x: hidden;">
+    <div class="float-button">
+        <a class="float-button-link" href=https://web.whatsapp.com target="_blank">
+          <img src="{% static 'images/suport.png' %}" alt="Suporte">
+        </a>
+      </div>
+            
     <header id="header">
         <nav id="nav" class="navbar navbar-expand-lg ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,8 +83,8 @@
             
             <div id="initial_banner">
                 <div id="presentationText">
-                    <h1>Aqui você encontra o que procura :)</h1>
-                    <p>Nossa loja oferece a você os melhores livros para florescer sua imaginação.</p>
+                    <h1>Livros que abrem portas :)</h1>
+                    <p>Nossa plataforma promove a leitura e a educação, oferecendo livros acessíveis para todes.</p>
                     <a type="button"  data-toggle="modal" data-target="#myModal">Cadastre seu Livro</a>
                 </div>
 
