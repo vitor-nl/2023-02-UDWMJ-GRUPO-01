@@ -45,10 +45,11 @@ def salvar(request):
         author = request.POST.get("author")
         sinopse = request.POST.get("sinopse")
         status = request.POST.get("status")
+        photo = request.FILES.get("photo")
         # date_fabrication = request.POST.get("date_fabrication")
         # active = request.POST.get("active")
 
-        book = Books(name=name, author=author, sinopse=sinopse, status= status)
+        book = Books(name=name, author=author, sinopse=sinopse, status= status, photo=photo)
 
         book.save()
 

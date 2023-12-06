@@ -18,4 +18,7 @@ urlpatterns = [
     path("clientes_redessociais/", include("clients.urls", namespace="clients_socialnetworks"),),
     path('accounts/', include('django.contrib.auth.urls')),
     path('books/', include("books.urls")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
