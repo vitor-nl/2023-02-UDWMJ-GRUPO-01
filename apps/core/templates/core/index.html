@@ -71,21 +71,18 @@
 
             </div>
             <div id="header_icons">
-                    <img src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
-            </div>
-            <div id="alinhamento">
-                    {% if request.user.is_authenticated %}
-                        <p>Olá, {{ request.user.username }} !</p>
-                    {% else %}
-                        <a href="{% url 'login' %}">Olá, faça seu login ou cadastra-se</a>
-                    {% endif %}
-        
-                </div>
-                    {% if request.user.is_authenticated %}
-                        <a href="{% url 'logout' %}">Sair</a>
-                    {% endif %} 
-        
-            </header>
+                        <img src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
+                        {% if request.user.is_authenticated %}
+                            <p>Olá, {{ request.user.username }} !</p>
+                        {% else %}
+                            <a href="{% url 'login' %}">Olá, faça seu login ou cadastra-se</a>
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'logout' %}">Sair</a>
+                        {% endif %} 
+            
+                    </div>
+                </header>
 
     <div id="container">
         <main>
