@@ -11,64 +11,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    {% comment %} CORRIGIR AS CLASSES BOOTSTRAP PARA QUE O MODAL FUNCIONE {% endcomment %}
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> {% endcomment %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- Style -->
-    <link rel="stylesheet" href="{% static 'style/header.css' %}">
-    <link rel="stylesheet" href="{% static 'style/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'style/aboutUs.css' %}">
-    <link rel="stylesheet" href="{% static 'style/card.css' %}">
-    <link rel="stylesheet" href="{% static 'style/category.css' %}">
-    <link rel="stylesheet" href="{% static 'style/banner.css' %}">
-    <link rel="stylesheet" href="{% static 'style/globalstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'style/header.css'%}">
+    <link rel="stylesheet" href="{% static 'style/footer.css'%}">
+    <link rel="stylesheet" href="{% static 'style/aboutUs.css'%}">
+    <link rel="stylesheet" href="{% static 'style/card.css'%}">
+    <link rel="stylesheet" href="{% static 'style/category.css'%}">
+    <link rel="stylesheet" href="{% static 'style/banner.css'%}">
+    <link rel="stylesheet" href="{% static 'style/globalstyle.css'%}">
 </head>
 
 <body>
     <header id="header">
-        <a class="logo" href="/books">
-            <img class="pointer" src="{% static 'images/logo.png' %}" alt="Ilustração de livro aberto">
-            <span>Livraria Fapa</span>
-        </a>
-
-        <nav id="nav">
-            <ul id="menu" role="menu">
-                <li><a href="#initial_banner">Início</a></li>
-                <li><a href="#nav_categories">Categorias</a></li>
-                {% if request.user.is_authenticated %}
-                  <li><a href="#container_cards">Livros</a></li>
-                {% else %}
-                
-                {% endif %}
-                <li><a href="#about_us">Sobre nós</a></li>
-            </ul>
-        </nav>
-
-        <div id="search_field">
-            <input class="input pointer" type="text" placeholder="Pesquise livros" pattern=".+" required />
-            <button class="submit_lente pointer" type="submit">
-                <img src="{% static 'images/icons/search.svg' %}" alt="ícone de lupa">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-        </div>
+            <a class="logo" href="/books">
+                <img class="pointer" src="{% static 'images/logo.png' %}" alt="Ilustração de livro aberto">
+                <span>Livraria Fapa</span>
+            </a>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#initial_banner">Início <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="##nav_categories" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categoria de Livros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Todos os Livros</a>
+                        <a class="dropdown-item" href="#">Romance</a>
+                        <a class="dropdown-item" href="#">Mistério</a>
+                        <a class="dropdown-item" href="#">Quadrinhos</a>
+                        <a class="dropdown-item" href="#">Autoajuda</a>
+                        <a class="dropdown-item" href="#">Biografia</a>
+                        <a class="dropdown-item" href="#">Terror</a>
+                        <a class="dropdown-item" href="#">Poesia</a>
+                        <a class="dropdown-item" href="#">Fantasia</a>
+                      </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#about_us">Sobre Nós</a>
+                  </li>
+              </ul>
+              <a class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar livros" pattern=".+" required />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <img src="{% static 'images/icons/search.svg' %}" alt="ícone de lupa">
+                </button>
+        
 
-        <div id="header_icons">
-            <img src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
-
-            {% if request.user.is_authenticated %}
-                <p>Olá, {{ request.user.username }} !</p>
-            {% else %}
-                <a href="{% url 'login' %}">Olá, faça seu login ou cadastra-se</a>
-            {% endif %}
-            
-            {% if request.user.is_authenticated %}
-                <a href="{% url 'logout' %}">Sair</a>
-            {% endif %} 
-        </div>
-    </header>
+            </div>
+            <div id="header_icons">
+                    <img src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
+            </div>
+            <div id="alinhamento">
+                    {% if request.user.is_authenticated %}
+                        <p>Olá, {{ request.user.username }} !</p>
+                    {% else %}
+                        <a href="{% url 'login' %}">Olá, faça seu login ou cadastra-se</a>
+                    {% endif %}
+        
+                </div>
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Sair</a>
+                    {% endif %} 
+        
+            </header>
 
     <div id="container">
         <main>
@@ -86,32 +103,21 @@
                 </div>
             </div>
 
-            <nav id="nav_categories">
-                <div>
-                    <h2>Nossas categorias:</h2>
-                </div>
-                <ul id="menu_categories">
-                    <li>Romance</li>
-                    <li>Mistério</a> </li>
-                    <li>Quadrinhos</li>
-                    <li>Autoajuda</li>
-                    <li>Biografia</li>
-                    <li>Terror</li>
-                    <li>Poesia</li>
-                    <li>Fantasia</li>
-                </ul>
-            </nav>
-            
-
             <div id="container_cards">
                 {% for books in books %}
                 <div class="book_card">
-                    <img src="{{ books.get_image_url }}" alt="{{ books.name }}">
-                    <h2>{{ books.name }}</h2>
-                    <p>Autor:{{books.author }}</p>
-                    <p>Sinopse:{{ books.sinopse }}</p>
-                    <p>Status:{{ books.status }}</p>
-              
+                    {% if books.photo %}
+    
+                    <img src="{{ books.photo.url }}" alt="{{ books.name }} Image">
+                    {% else %}
+                    <p>Nenhuma imagem disponível</p>
+                    {% endif %}
+                    <div class="book_informations">
+                        <h2>{{ books.name }}</h2>
+                        <p>Autor:{{books.author }}</p>
+                        <p>Sinopse:{{ books.sinopse }}</p>
+                        <p>Status:{{ books.status }}</p>
+                    </div>
                     <div id="presentationText">
                     <a href="/reservar/{{ books.id }}">Reservar</a>
 
@@ -119,14 +125,12 @@
             </div>
                 {% endfor %}
             </div>
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-              
-                  <!-- Modal content-->
-                  <div class="modal-content">
+            <div id="myModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">Cadastrar Livro</h4>
+                    
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div ="modal-edit">
@@ -147,8 +151,9 @@
                                   <label for="name">Status:</label>
                                   <input type="text" class="form-control" id="pwd" placeholder="Disponível ou Indiponível" name="status">
                                 </div>
-                                <button href="/books"type="submit" class="btn btn-default">Submit</button>
-                               
+                                <div class="modal-footer">
+                                    <button type="submit" href="/books" class="btn btn-default">Salvar</button>
+                                  </div>
                             </form>
                         </div>
                     </div>
@@ -159,7 +164,7 @@
               </div>
         </div>
 
-            <div id="about_us">
+            <div style/aboutUs.css id="about_us">
                 <h3>Sobre nós</h3>
                 <p>
                     A Livraria Fapa foi criada pelos alunos do curso de Análise e desenvolvimento de sistemas da
@@ -175,19 +180,18 @@
                     como html e css.
                 </p>
 
-                <div id="group">
-
+                <div id="group"  class="text-center">
                     <div class="team_photo">
-                        <img src="{% static 'images/adriele.jpeg' %}" alt="">
-                        <p>Adriele Ferreira</p>
+                        {% comment %} <img src="images/perfilTeste.png" alt=""> {% endcomment %}
+                        <p>Adri</p>
                     </div>
                     <div class="team_photo">
-                        <img src="{% static 'images/leonardo.jpg' %}" alt="">
-                        <p>Leonardo Carvalho</p>
+                        <img src="{% static 'images/Leonardo.jpg' %}" alt="">
+                        <p>Leo</p>
                     </div>
                     <div class="team_photo">
-                        <img src="{% static 'images/mariana.jpg' %}" alt="">
-                        <p>Mariana Gonçalves</p>
+                        {% comment %} <img src="{% static 'images/mariana.jpg' %}" alt=""> {% endcomment %}
+                        <p>Mari</p>
                     </div>
                 </div>
             </div>

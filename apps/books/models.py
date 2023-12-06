@@ -12,19 +12,6 @@ class Books(models.Model):
     sinopse = models.TextField("Sinopse", max_length=100)
     status = models.TextField("Status", max_length=20)
     photo = models.ImageField(upload_to='upload_image_book', blank=True) 
-    # date_fabrication = models.DateField(
-    #     "Data Fabricacao", auto_now=False, auto_now_add=False
-    # )
-    # is_active = models.BooleanField(
-    #     "Ativo",
-    #     choices=[
-    #         (True, "Disponível"),
-    #         (False, "Indisponível"),
-    #     ],
-    #     default=False,
-    # )
-    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    # pictures = models.ImageField(upload_to="fotos/", blank=True, null=True)
     
     class Meta:
         verbose_name = "Livro"
