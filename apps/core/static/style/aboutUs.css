@@ -2,22 +2,41 @@
     max-width: 900px;
     margin: 70px auto;
     text-align: justify;
-<<<<<<< HEAD
-    background: rgb(255, 255, 255)(0, 0, 0);
-=======
     background: rgb(255, 255, 255);
->>>>>>> main
 }
 
 #about_us > h3{
-    text-align: center;
-    margin-bottom: 30px;
+    margin-top: 300px;
+    font-size: 25px;
     font-weight: bold;
+    line-height: 50px;
+    margin-bottom: 10px;
+    font-family:'Montserrat', sans-serif;
+    color: var(--darkBlue);
 }
 
 #about_us > p{
     line-height: 30px;
     margin-bottom: 20px;
+    font-family:'Montserrat', sans-serif;
+}
+
+.person{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-bottom: 0px;
+    font-family:'Montserrat', sans-serif;
+    color: var(--darkBlue);
+}
+
+.text-book{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-bottom: 10px;
+    font-family:'Montserrat', sans-serif;
+    color: var(--darkBlue);
 }
 
 #group{
@@ -32,5 +51,15 @@
 }
 
 .team_photo > img{
-    width: 90px;
+    width: 105px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
 }
+
+.team_photo > img:hover{
+    box-shadow: 3px 3px 3px var(--darkBlue);
+    border-radius: 100%;
+    background-color: var(--darkBlue);
+    transform: scale(1.2);
+}
+  
