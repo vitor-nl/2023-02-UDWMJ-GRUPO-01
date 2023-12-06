@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from .models import Books
 
+
 # Create your views here.
 
 
@@ -21,6 +22,7 @@ def salvar(request):
         sinopse = request.POST.get("sinopse")
         status = request.POST.get("status")
         photo = request.FILES.get("photo")
+    
 
         book = Books(name=name, author=author, sinopse=sinopse, status= status, photo=photo)
 
