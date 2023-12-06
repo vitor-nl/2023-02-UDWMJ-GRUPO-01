@@ -133,7 +133,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <div ="modal-edit">
+                        <div class="modal-edit">
                             <form action="{% url 'salvar' %}" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
@@ -152,7 +152,7 @@
                                   <input type="text" class="form-control" id="pwd" placeholder="Disponível ou Indiponível" name="status">
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" href="/books" class="btn btn-default">Salvar</button>
+                                    <button href="/books"type="submit" class="btn btn-default">Salvar</button>
                                   </div>
                             </form>
                         </div>
@@ -164,39 +164,39 @@
               </div>
         </div>
 
-            <div style/aboutUs.css id="about_us">
-                <h3>Sobre nós</h3>
-                <p>
-                    A Livraria Fapa foi criada pelos alunos do curso de Análise e desenvolvimento de sistemas da
-                    faculdade
-                    Unirriter campus Fapa em Porto Alegre, RS.
-                </p>
-                <p>
-                    A iniciativa surgiu através do desenvolvimento de um projeto avaliativo da disciplina de Sistemas
-                    Distribuídos e
-                    Desenvolvimento web, mobile e jogos e busca trazer conceitos como criação e consumo de API com
-                    Python e
-                    Djando, assim
-                    como html e css.
-                </p>
+        <div style/aboutUs.css id="about_us">
+            <h3>Sobre nós</h3>
+            <p>
+                A Livraria Fapa foi criada pelos alunos do curso de Análise e desenvolvimento de sistemas da
+                faculdade
+                Unirriter campus Fapa em Porto Alegre, RS.
+            </p>
+            <p>
+                A iniciativa surgiu através do desenvolvimento de um projeto avaliativo da disciplina de Sistemas
+                Distribuídos e
+                Desenvolvimento web, mobile e jogos e busca trazer conceitos como criação e consumo de API com
+                Python e
+                Djando, assim
+                como html e css.
+            </p>
 
-                <div id="group"  class="text-center">
-                    <div class="team_photo">
-                        {% comment %} <img src="images/perfilTeste.png" alt=""> {% endcomment %}
-                        <p>Adri</p>
-                    </div>
-                    <div class="team_photo">
-                        <img src="{% static 'images/Leonardo.jpg' %}" alt="">
-                        <p>Leo</p>
-                    </div>
-                    <div class="team_photo">
-                        {% comment %} <img src="{% static 'images/mariana.jpg' %}" alt=""> {% endcomment %}
-                        <p>Mari</p>
-                    </div>
+            <div id="group"  class="text-center">
+                <div class="team_photo">
+                    {% comment %} <img src="images/perfilTeste.png" alt=""> {% endcomment %}
+                    <p>Adri</p>
+                </div>
+                <div class="team_photo">
+                    <img src="{% static 'images/Leonardo.jpg' %}" alt="">
+                    <p>Leo</p>
+                </div>
+                <div class="team_photo">
+                    {% comment %} <img src="{% static 'images/mariana.jpg' %}" alt=""> {% endcomment %}
+                    <p>Mari</p>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+</div>
 
     <footer id="footer">
         <div id="footer_container">
