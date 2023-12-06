@@ -26,40 +26,27 @@
     <link rel="stylesheet" href="{% static 'style/globalstyle.css'%}">
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <header id="header">
-        <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="nav" class="navbar navbar-expand-lg ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <a class="logo" href="/books">
-                <img class="pointer" src="{% static 'images/logo.png' %}" alt="Ilustração de livro aberto">
+                <img class="pointer" src="{% static 'images/book.png' %}" alt="Ilustração de livro aberto">
                 <span>Livraria Fapa</span>
             </a>
           
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="#initial_banner">Início <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="##nav_categories" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Categoria de Livros
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Todos os Livros</a>
-                        <a class="dropdown-item" href="#">Romance</a>
-                        <a class="dropdown-item" href="#">Mistério</a>
-                        <a class="dropdown-item" href="#">Quadrinhos</a>
-                        <a class="dropdown-item" href="#">Autoajuda</a>
-                        <a class="dropdown-item" href="#">Biografia</a>
-                        <a class="dropdown-item" href="#">Terror</a>
-                        <a class="dropdown-item" href="#">Poesia</a>
-                        <a class="dropdown-item" href="#">Fantasia</a>
-                      </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nav_categories">Categoria de Livros <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#about_us">Sobre Nós</a>
+                    <a class="nav-link" href="#about_us">Sobre Nós</a>
                   </li>
               </ul>
               <a class="form-inline my-2 my-lg-0">
@@ -84,6 +71,7 @@
                     </div>
                 </header>
 
+                
     <div id="container">
         <main>
             
@@ -193,28 +181,28 @@
 
     <footer id="footer">
         <div id="footer_container">
-            <div id="footer_informaiton">
+            <div id="footer_informaiton_contact">
                 <h3 id="info_title">Contato</h3>
 
                 <div id="infos">
                     <img class="infos_icon contact" src="{% static 'images/icons/phone.svg' %}" alt="Ícone de telefone">
-                    <p id="infos_text">(55) 51 0000-0009</p>
+                    <p id="infos_text">(55) 51 3332-2788</p>
                 </div>
 
                 <div id="infos">
                     <img class="pointer infos_icon contact" src="{% static 'images/icons/email.svg' %}"
                         alt="ícone de carta">
-                    <p class="pointer" id="infos_text">livrariafapa@email.com</p>
+                    <p class="pointer" id="infos_text">livrariafapa@gmail.com</p>
                 </div>
             </div>
 
-            <div id="footer_informaiton">
+            <div id="footer_informaiton_medias">
                 <h3 id="info_title">Redes Sociais</h3>
 
                 <div id="infos" class="pointer">
                     <img class="infos_icon social_media" src="{% static 'images/icons/instagram.png' %}"
                         alt="Logo do instagram">
-                    <p id="infos_text">@livrariaFapa</p>
+                    <p id="infos_text">@livrariaFapa_</p>
                 </div>
 
                 <div id="infos" class="pointer">
@@ -226,7 +214,7 @@
 
             <div id="footer_phrase">
                 <a class="logo" href="#">
-                    <img class="infos_icon" src="{% static 'images/logo_white.png' %}" alt="Ilustração de livro aberto">
+                    <img class="infos_icon" src="{% static 'images/book.png' %}" alt="Ilustração de livro aberto">
                     <span id="footer_logo">Livraria Fapa</span>
                 </a>
                 <p>Os livros nos levam a lugares inimagináveis, com eles tudo é possível.</p>
