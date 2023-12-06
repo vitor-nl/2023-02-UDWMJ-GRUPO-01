@@ -13,43 +13,24 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- Style -->
-    <link rel="stylesheet" href="{% static 'style/header.css' %}">
-    <link rel="stylesheet" href="{% static 'style/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'style/aboutUs.css' %}">
-    <link rel="stylesheet" href="{% static 'style/card.css' %}">
-    <link rel="stylesheet" href="{% static 'style/category.css' %}">
-    <link rel="stylesheet" href="{% static 'style/banner.css' %}">
-    <link rel="stylesheet" href="{% static 'style/globalstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'style/header.css'%}">
+    <link rel="stylesheet" href="{% static 'style/footer.css'%}">
+    <link rel="stylesheet" href="{% static 'style/aboutUs.css'%}">
+    <link rel="stylesheet" href="{% static 'style/card.css'%}">
+    <link rel="stylesheet" href="{% static 'style/category.css'%}">
+    <link rel="stylesheet" href="{% static 'style/banner.css'%}">
+    <link rel="stylesheet" href="{% static 'style/globalstyle.css'%}">
 </head>
 
 <body>
     <header id="header">
-        <a class="logo" href="/books">
-            <img class="pointer" src="{% static 'images/logo.png' %}" alt="Ilustração de livro aberto">
-            <span>Livraria Fapa</span>
-        </a>
-
-        <nav id="nav">
-            <ul id="menu" role="menu">
-                <li><a href="#initial_banner">Início</a></li>
-                <li><a href="#nav_categories">Categorias</a></li>
-                {% if request.user.is_authenticated %}
-                  <li><a href="#container_cards">Livros</a></li>
-                {% else %}
-                
-                {% endif %}
-                <li><a href="#about_us">Sobre nós</a></li>
-            </ul>
-        </nav>
-
-        <div id="search_field">
-            <input class="input pointer" type="text" placeholder="Pesquise livros" pattern=".+" required />
-            <button class="submit_lente pointer" type="submit">
-                <img src="{% static 'images/icons/search.svg' %}" alt="ícone de lupa">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
             <a class="logo" href="/books">
                 <img class="pointer" src="{% static 'images/logo.png' %}" alt="Ilustração de livro aberto">
@@ -86,23 +67,25 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
                     <img src="{% static 'images/icons/search.svg' %}" alt="ícone de lupa">
                 </button>
-            </a>
         
 
-        <div id="header_icons">
-            <img src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
-
-            {% if request.user.is_authenticated %}
-                <p>Olá, {{ request.user.username }} !</p>
-            {% else %}
-                <a href="{% url 'login' %}">Olá, faça seu login ou cadastra-se</a>
-            {% endif %}
-            
-            {% if request.user.is_authenticated %}
-                <a href="{% url 'logout' %}">Sair</a>
-            {% endif %} 
-        </div>
-    </header>
+            </div>
+            <div id="header_icons">
+                    <img src="{% static 'images/icons/login.svg' %}" alt="Ícone de login da conta">
+            </div>
+            <div id="alinhamento">
+                    {% if request.user.is_authenticated %}
+                        <p>Olá, {{ request.user.username }} !</p>
+                    {% else %}
+                        <a href="{% url 'login' %}">Olá, faça seu login ou cadastra-se</a>
+                    {% endif %}
+        
+                </div>
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Sair</a>
+                    {% endif %} 
+        
+            </header>
 
     <div id="container">
         <main>
@@ -123,12 +106,18 @@
             <div id="container_cards">
                 {% for books in books %}
                 <div class="book_card">
-                    <img src="{{item.photo.url }}" alt="{{ books.name }}">
-                    <h2>{{ books.name }}</h2>
-                    <p>Autor:{{books.author }}</p>
-                    <p>Sinopse:{{ books.sinopse }}</p>
-                    <p>Status:{{ books.status }}</p>
-              
+                    {% if books.photo %}
+    
+                    <img src="{{ books.photo.url }}" alt="{{ books.name }} Image">
+                    {% else %}
+                    <p>Nenhuma imagem disponível</p>
+                    {% endif %}
+                    <div class="book_informations">
+                        <h2>{{ books.name }}</h2>
+                        <p>Autor:{{books.author }}</p>
+                        <p>Sinopse:{{ books.sinopse }}</p>
+                        <p>Status:{{ books.status }}</p>
+                    </div>
                     <div id="presentationText">
                     <a href="/reservar/{{ books.id }}">Reservar</a>
 
@@ -140,7 +129,8 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1>Titulo</h1>
+                    
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="modal-edit">
@@ -162,7 +152,7 @@
                                   <input type="text" class="form-control" id="pwd" placeholder="Disponível ou Indiponível" name="status">
                                 </div>
                                 <div class="modal-footer">
-                                    <button href="/books"type="submit" class="btn btn-default">Submit</button>
+                                    <button href="/books"type="submit" class="btn btn-default">Salvar</button>
                                   </div>
                             </form>
                         </div>
@@ -174,33 +164,39 @@
               </div>
         </div>
 
-            <div id="about_us" class="text-center">
-                <h3>Sobre nós</h3>
-                <p>A <strong>Livraria Futuro</strong> foi criada pelos alunos do curso de <strong>Análise e Desenvolvimento de Sistemas</strong> da faculdade <strong>Unirriter</strong> campus Fapa em Porto Alegre, RS.</p>
-                <br>
-                <div id="group">
-                    <div>
-                        <img src="{% static 'images/Leonardo.jpg' %}" alt="">
-                        <p>Adri</p>
-                    </div>
-                    <div class="team_photo">
-                        <img src="{% static 'images/leonardo.jpg' %}" alt="">
-                        <p>Leonardo Carvalho</p>
-                    </div>
-                    <div>
-                       <img src="{% static 'images/Leonardo.jpg' %}" alt=""> 
-                        <p>Mari</p>
-                    </div>
+        <div style/aboutUs.css id="about_us">
+            <h3>Sobre nós</h3>
+            <p>
+                A Livraria Fapa foi criada pelos alunos do curso de Análise e desenvolvimento de sistemas da
+                faculdade
+                Unirriter campus Fapa em Porto Alegre, RS.
+            </p>
+            <p>
+                A iniciativa surgiu através do desenvolvimento de um projeto avaliativo da disciplina de Sistemas
+                Distribuídos e
+                Desenvolvimento web, mobile e jogos e busca trazer conceitos como criação e consumo de API com
+                Python e
+                Djando, assim
+                como html e css.
+            </p>
+
+            <div id="group"  class="text-center">
+                <div class="team_photo">
+                    {% comment %} <img src="images/perfilTeste.png" alt=""> {% endcomment %}
+                    <p>Adri</p>
                 </div>
-                <br><br>
-                <p>A iniciativa surgiu através do desenvolvimento de um projeto avaliativo da disciplina de Sistemas Distribuídos e Desenvolvimento Web, Mobile, Jogos e busca trazer conceitos como criação e consumo de API com Python e Djando, assim como html e css.</p>
-                <p>Acreditamos que o conhecimento é um direito de todes, que todes devem ter a oportunidade de aprender e crescer com uma plataforma online que conecta pessoas que querem <i><strong>doar livros</strong></i> com pessoas que <i><strong>precisam deles</strong></i></p>
-                <p>Nosso objetivo é tornar o conhecimento acessível a todos, independentemente de sua classe social, localização ou situação financeira e trabalhamos para garantir que tudo seja realizado de forma segura e transparente.</p>
-                <p class="text-uppercase"><strong>Doe um livro, transforme uma vida.</strong></p>
-                <p>Junte-se a nós nessa missão de tornar o conhecimento acessível a todos.</p>
+                <div class="team_photo">
+                    <img src="{% static 'images/Leonardo.jpg' %}" alt="">
+                    <p>Leo</p>
+                </div>
+                <div class="team_photo">
+                    {% comment %} <img src="{% static 'images/mariana.jpg' %}" alt=""> {% endcomment %}
+                    <p>Mari</p>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+</div>
 
     <footer id="footer">
         <div id="footer_container">
@@ -209,7 +205,7 @@
 
                 <div id="infos">
                     <img class="infos_icon contact" src="{% static 'images/icons/phone.svg' %}" alt="Ícone de telefone">
-                    <p id="infos_text">(55) 51 0000-0000</p>
+                    <p id="infos_text">(55) 51 0000-0009</p>
                 </div>
 
                 <div id="infos">

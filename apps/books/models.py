@@ -3,26 +3,15 @@ from categories.models import Category
 
 # Create your models here.
 
+def upload_image_book(instance, filename):
+    return f"{instance.id_book}-{filename}"
 
 class Books(models.Model):
     name = models.CharField("Nome", max_length=50)
     author = models.CharField("Autor", max_length=50)
     sinopse = models.TextField("Sinopse", max_length=100)
     status = models.TextField("Status", max_length=20)
-    photo = models.FileField(upload_to='static', null=True, blank=True) 
-    # date_fabrication = models.DateField(
-    #     "Data Fabricacao", auto_now=False, auto_now_add=False
-    # )
-    # is_active = models.BooleanField(
-    #     "Ativo",
-    #     choices=[
-    #         (True, "Disponível"),
-    #         (False, "Indisponível"),
-    #     ],
-    #     default=False,
-    # )
-    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    # pictures = models.ImageField(upload_to="fotos/", blank=True, null=True)
+    photo = models.ImageField(upload_to='upload_image_book', blank=True) 
     
     class Meta:
         verbose_name = "Livro"
