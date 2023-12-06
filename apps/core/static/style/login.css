@@ -1,0 +1,164 @@
+* {
+    font: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.login-form {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 5%;
+    background-color: #F2F2F2;
+    border-radius: 10%;
+    margin-bottom: 2%;
+  }
+
+  nav{
+    display: flex;
+    justify-content: center;
+    padding: 15px 70px;
+    width: 100%;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+    background-color: #2D446E;
+    flex-direction: row;
+    column-gap: 30px;
+    font-size: 25px;
+    margin-bottom: 2%;
+    }
+
+    nav a{
+        background-color: #2D446E;
+        color: white;
+        align-items: center;
+    }
+
+    label{
+        background-color: #F2F2F2;
+    }
+
+  .form-group {
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F2F2F2;
+  }
+  
+  .form-control {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn {
+    width: 70%;
+    height: 6%;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .btn:hover{
+    background-color: #65af99;
+  }
+  
+  .btn-primary {
+    background-color: #65AA80
+  }
+  
+  .alert {
+    margin-bottom: 15px;
+  }
+  
+  .back-link {
+    margin-right: 15px;
+    text-align: left;
+    background-color: #F2F2F2;
+    color: blue;
+  }
+
+  .logo {
+    display: flex;
+    align-items: left;
+    column-gap: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.logo img {
+    max-width: 150px;
+    max-height: 40px;
+    color: white;
+}
+  
+#footer{
+    width: 100%!important;
+    display: flex;
+    background-color: #2D446E;
+    color: white
+}
+
+#footer_container {
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    background-color: #2D446E;
+    font-size: 15px;
+}
+
+#footer_informaiton {
+    display: flex;
+    flex-direction: column;
+}
+
+#info_title {
+    font-weight: bold!important;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align:initial;
+}
+
+#infos{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-left: 10px;
+}
+
+#infos{
+    display: flex;
+    align-items: center;
+}
+
+.contact{
+    width: 25px;
+}
+.social_media{
+    width: 25px;
+}
+
+#footer_phrase{
+    display: content;
+}
+
+#footer_phrase > p{
+    margin-top: 20px;
+}
+
+#footer_logo{
+    font-weight: bold!important;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align:initial;
+    transition: all 0.2s ease-in-out;
+}
