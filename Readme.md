@@ -20,7 +20,9 @@ Software feito para bons leitores.
 
 ## Running end-to-end tests
 
-%windir%\System32\cmd.exe "/K" C:\ProgramData\miniconda3\Scripts\activate.bat C:\ProgramData\miniconda3\n
+%windir%\System32\cmd.exe "/K" C:\ProgramData\miniconda3\Scripts\activate.bat C:\ProgramData\miniconda3
+
+
 conda activate projetoapp
 cd apps 
 python manage.py runserver
