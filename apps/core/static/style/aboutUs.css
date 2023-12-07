@@ -6,7 +6,6 @@
 }
 
 #about_us > h3{
-    margin-top: 300px;
     font-size: 25px;
     font-weight: bold;
     line-height: 50px;
@@ -16,6 +15,7 @@
 }
 
 #about_us > p{
+    text-align: justify;
     line-height: 30px;
     margin-bottom: 20px;
     font-family:'Montserrat', sans-serif;
