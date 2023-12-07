@@ -14,7 +14,7 @@ Software feito para bons leitores.
 </div>
 
 ## Como elas foram usadas
-# O que moldou nosso modelo de desenvolvimento foi o framework Django feito para desenvolvimento rápido para web na visão macro e prática do Django request workflow é basicamente a request que chega no seu servidor e vai para os endpoints depois que acha ele faz a resolução da url, depois ele bate em uma view, e a view ela pode acessar os banco de dados através dos models e ela retorna um template.
+### O que moldou nosso modelo de desenvolvimento foi o framework Django feito para desenvolvimento rápido para web na visão macro e prática do Django request workflow é basicamente a request que chega no seu servidor e vai para os endpoints depois que acha ele faz a resolução da url, depois ele bate em uma view, e a view ela pode acessar os banco de dados através dos models e ela retorna um template.
 
 
 
