@@ -24,6 +24,10 @@ Software feito para bons leitores.
 
 
 conda activate projetoapp
+
+
 cd apps 
+
+
 python manage.py runserver
 
