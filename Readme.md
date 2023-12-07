@@ -7,9 +7,7 @@ Software feito para bons leitores.
 <div align="left">
 	<code><img width="50" src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="HTML" title="HTML"/></code>
 	<code><img width="50" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="HTML" title="HTML"/></code>
-	<code><img width="50" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="HTML" title="HTML"/></code>
 	<code><img width="50" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg" alt="HTML" title="HTML"/></code>
-	<code><img width="50" src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="HTML" title="HTML"/></code>
 	<code><img width="50" src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="HTML" title="HTML"/></code>
 	<code><img width="50" src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="HTML" title="HTML"/></code>
 	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code>
